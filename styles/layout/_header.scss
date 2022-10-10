@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  height: 80px;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-bottom: solid 1px #efefef;
+  .left {
+    .logo {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      padding: 4px;
+      border: solid 1px black;
+      margin-right: 4px;
+    }
+  }
+}
