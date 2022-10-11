@@ -1,0 +1,28 @@
+
+#infomation_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .left_image {
+    height: 200px;
+    min-width: 240px;
+    .image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .right_infomation {
+    // flex: auto;
+    .title {
+      color: red;
+    }
+    .more_infomation {
+      display: flex;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

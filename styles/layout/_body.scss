@@ -61,6 +61,16 @@ body{
       width: 100%;
       height: 100vh;
       background-color: #f8f8f8;
+      display: flex;
+      .left_container {
+        flex: 1;
+      }
+      .center_container {
+        flex: 4;
+      }
+      .right_container {
+        flex: 2;
+      }
     }
   }
 }

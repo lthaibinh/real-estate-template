@@ -1,3 +1,27 @@
+#infomation_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#infomation_card .left_image {
+  height: 200px;
+  min-width: 240px;
+}
+#infomation_card .left_image .image {
+  height: 100%;
+  width: 100%;
+}
+#infomation_card .right_infomation .title {
+  color: red;
+}
+#infomation_card .right_infomation .more_infomation {
+  display: flex;
+}
+#infomation_card .right_infomation .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 header {
   display: flex;
   height: 80px;
@@ -68,6 +92,16 @@ body .body_content .main_content {
   width: 100%;
   height: 100vh;
   background-color: #f8f8f8;
+  display: flex;
+}
+body .body_content .main_content .left_container {
+  flex: 1;
+}
+body .body_content .main_content .center_container {
+  flex: 4;
+}
+body .body_content .main_content .right_container {
+  flex: 2;
 }
 
 /*# sourceMappingURL=main.css.map */
