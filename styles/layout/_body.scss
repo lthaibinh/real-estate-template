@@ -63,13 +63,16 @@ body{
       background-color: #f8f8f8;
       display: flex;
       .left_container {
-        flex: 1;
+        flex: 2;
       }
       .center_container {
-        flex: 4;
+        flex: 5;
+        .infomation_card + .infomation_card {
+          margin-top: 16px;
+        }
       }
       .right_container {
-        flex: 2;
+        flex: 3;
       }
     }
   }
