@@ -1,0 +1,37 @@
+.input-group {
+  span {
+    @include flex_center;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    padding: 4px;
+    i {
+      font-size: 24px;
+    }
+    
+  }
+  input {
+    padding-left: 2.2rem;
+    &:focus {
+      z-index: unset !important;
+    }
+  }
+}
+.forget-password {
+  @include flex_center;
+  justify-content: space-between;
+}
+
+.modal-login {
+  .modal-dialog-login {
+    height: 75vh;
+  }
+  .modal-body-right {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .modal-header {
+    z-index: 1;
+  }
+}

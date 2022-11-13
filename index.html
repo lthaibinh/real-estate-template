@@ -12,16 +12,16 @@
     />
 
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css"
       rel="stylesheet"
     />
 
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/regular.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/regular.min.css"
       rel="stylesheet"
     />
 
@@ -36,7 +36,10 @@
     <link href="./styles/main.css" rel="stylesheet" />
 
     <!-- import font family -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Document</title>
   </head>
@@ -64,19 +67,25 @@
     <div class="right ms-auto">
       <div class="container">
         <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
-        <button class="btn btn_utilities">
+        <button
+          class="btn btn_utilities"
+          data-bs-toggle="modal"
+          data-bs-target="#modalSignIn"
+        >
           Đăng nhập
         </button>
-        <button class="btn btn_utilities">
+        <button
+          class="btn btn_utilities"
+          data-bs-toggle="modal"
+          data-bs-target="#modalSignUp"
+        >
           Đăng ký
         </button>
-        <button class="btn btn_utilities">
-          Đăng tin
-        </button>
+        <button class="btn btn_utilities">Đăng tin</button>
         <button class="btn btn_utilities">
           <i class="far fa-lightbulb"></i>
         </button>
-        
+
         <button class="btn btn_utilities"><i class="fas fa-moon"></i></button>
         <button class="btn btn_utilities"><i class="fas fa-sun"></i></button>
       </div>
@@ -191,6 +200,198 @@
       </div>
     </section>
 
+    <!-- Modal login -->
+    <div
+      class="modal fade modal-login"
+      id="modalSignIn"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-login" style="max-width: 52vw">
+        <div class="modal-content h-100">
+          <div class="modal-header border-bottom-0 position-absolute end-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row h-100">
+              <div class="col-4 modal-body-left">
+                <img src="./images/bg-login.png" class="w-100" />
+              </div>
+              <div class="col-8 d-flex flex-column justify-content-between modal-body-right">
+                <div class="row">
+                  <div class="col-12 mt-5">
+                    <h5>xin chào bạn</h5>
+                    <h3>Đăng nhập để tiếp tục</h3>
+                  </div>
+                  <!-- username -->
+                  <div class="col-12 mt-4">
+                    <div class="input-group">
+                      <span class="input_username">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                  </div>
+                  <!-- password -->
+                  <div class="col-12 mt-3">
+                    <div class="input-group">
+                      <span class="input_username">
+                        <i class="fa-solid fa-lock"></i>
+                      </span>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                  </div>
+                  <!-- login -->
+                  <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary w-100">
+                      Đăng nhập
+                    </button>
+                  </div>
+                  <!-- quen tk -->
+                  <div class="col-12 mt-3">
+                    <div class="forget-password">
+                      <div class="">Nhớ tài khoản</div>
+                      <div class="">Quên mật khẩu</div>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      Hoặc
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <button class="btn btn-primary w-100">Facebook</button>
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn-primary w-100">Google</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mt-5 mb-2">
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      Chưa là thành viên? đăng ký tại đây
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal sign up -->
+    <div
+      class="modal fade modal-login"
+      id="modalSignUp"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-login" style="max-width: 52vw">
+        <div class="modal-content h-100">
+          <div class="modal-header border-bottom-0 position-absolute end-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row h-100">
+              <div class="col-4 modal-body-left">
+                <img src="./images/bg-login.png" class="w-100" />
+              </div>
+              <div class="col-8 d-flex flex-column justify-content-between modal-body-right">
+                <div class="row">
+                  <div class="col-12 mt-5">
+                    <h5>xin chào bạn</h5>
+                    <h3>Đăng ký tài khoản mới</h3>
+                  </div>
+                  <!-- password -->
+                  <div class="col-12 mt-4">
+                    <div class="input-group">
+                      <span class="input_username">
+                        <i class="fa-solid fa-phone"></i>
+                      </span>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                  </div>
+                  <!-- login -->
+                  <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary w-100">
+                      Tiếp tục
+                    </button>
+                  </div>
+                 
+                  <div class="col-12 mt-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      Hoặc
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <button class="btn btn-primary w-100">Facebook</button>
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn-primary w-100">Google</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mt-5 mb-2">
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      Chưa là thành viên? đăng ký tại đây
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- aside left -->
     <div class="body_content">
       <aside class="left_aside">
@@ -212,9 +413,9 @@
           </button>
         </div>
       </aside>
-      <section class="main_content">
-        <div class="left_container"></div>
-        <div class="center_container">
+      <section class="row main_content">
+        <div class="col-2 left_container"></div>
+        <div class="col-6 center_container">
           <article class="infomation_card">
             <div class="left_image">
               <img
@@ -227,8 +428,8 @@
               <div class="content_container">
                 <div class="title">
                   Q7 RIVERSIDE GIỎ HÀNG CHO THUÊ THÁNG 10 - 1PN 7TR - 2PN 8TR -
-                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ ĐƯỢC
-                  GIÁ ƯU ĐÃI
+                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ
+                  ĐƯỢC GIÁ ƯU ĐÃI
                 </div>
                 <div class="more_infomation">
                   <p class="price">Giá thỏa thuận</p>
@@ -236,11 +437,16 @@
                   <p class="address">Quận 7, Hồ Chí Minh</p>
                 </div>
                 <div class="details_infomation">
-                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7 Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline: 0352049769
+                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7
+                  Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc
+                  quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline:
+                  0352049769
                 </div>
                 <div class="footer">
                   <span class="time">Hôm nay</span>
-                  <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
+                  <button class="btn favorite_btn">
+                    <i class="far fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -258,8 +464,8 @@
               <div class="content_container">
                 <div class="title">
                   Q7 RIVERSIDE GIỎ HÀNG CHO THUÊ THÁNG 10 - 1PN 7TR - 2PN 8TR -
-                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ ĐƯỢC
-                  GIÁ ƯU ĐÃI
+                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ
+                  ĐƯỢC GIÁ ƯU ĐÃI
                 </div>
                 <div class="more_infomation">
                   <p class="price">Giá thỏa thuận</p>
@@ -267,11 +473,16 @@
                   <p class="address">Quận 7, Hồ Chí Minh</p>
                 </div>
                 <div class="details_infomation">
-                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7 Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline: 0352049769
+                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7
+                  Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc
+                  quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline:
+                  0352049769
                 </div>
                 <div class="footer">
                   <span class="time">Hôm nay</span>
-                  <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
+                  <button class="btn favorite_btn">
+                    <i class="far fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -289,8 +500,8 @@
               <div class="content_container">
                 <div class="title">
                   Q7 RIVERSIDE GIỎ HÀNG CHO THUÊ THÁNG 10 - 1PN 7TR - 2PN 8TR -
-                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ ĐƯỢC
-                  GIÁ ƯU ĐÃI
+                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ
+                  ĐƯỢC GIÁ ƯU ĐÃI
                 </div>
                 <div class="more_infomation">
                   <p class="price">Giá thỏa thuận</p>
@@ -298,11 +509,16 @@
                   <p class="address">Quận 7, Hồ Chí Minh</p>
                 </div>
                 <div class="details_infomation">
-                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7 Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline: 0352049769
+                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7
+                  Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc
+                  quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline:
+                  0352049769
                 </div>
                 <div class="footer">
                   <span class="time">Hôm nay</span>
-                  <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
+                  <button class="btn favorite_btn">
+                    <i class="far fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -320,8 +536,8 @@
               <div class="content_container">
                 <div class="title">
                   Q7 RIVERSIDE GIỎ HÀNG CHO THUÊ THÁNG 10 - 1PN 7TR - 2PN 8TR -
-                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ ĐƯỢC
-                  GIÁ ƯU ĐÃI
+                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ
+                  ĐƯỢC GIÁ ƯU ĐÃI
                 </div>
                 <div class="more_infomation">
                   <p class="price">Giá thỏa thuận</p>
@@ -329,11 +545,16 @@
                   <p class="address">Quận 7, Hồ Chí Minh</p>
                 </div>
                 <div class="details_infomation">
-                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7 Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline: 0352049769
+                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7
+                  Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc
+                  quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline:
+                  0352049769
                 </div>
                 <div class="footer">
                   <span class="time">Hôm nay</span>
-                  <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
+                  <button class="btn favorite_btn">
+                    <i class="far fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -351,8 +572,8 @@
               <div class="content_container">
                 <div class="title">
                   Q7 RIVERSIDE GIỎ HÀNG CHO THUÊ THÁNG 10 - 1PN 7TR - 2PN 8TR -
-                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ ĐƯỢC
-                  GIÁ ƯU ĐÃI
+                  3PN 11TR - HOTLINE 0235478985 LIÊN HỆ NGAY VỚI CHÚNG TÔI ĐỂ
+                  ĐƯỢC GIÁ ƯU ĐÃI
                 </div>
                 <div class="more_infomation">
                   <p class="price">Giá thỏa thuận</p>
@@ -360,17 +581,22 @@
                   <p class="address">Quận 7, Hồ Chí Minh</p>
                 </div>
                 <div class="details_infomation">
-                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7 Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline: 0352049769
+                  Hi anh chị! Bên em là đơn vị chuyên mảng cho thuê tại dự án Q7
+                  Riverside Complex. Nắm đầy đủ các căn đang cho thuê và. "Độc
+                  quyền" giỏ hàng xuất ngoại giao cho thuê.Liên hệ Hotline:
+                  0352049769
                 </div>
                 <div class="footer">
                   <span class="time">Hôm nay</span>
-                  <button class="btn favorite_btn"><i class="far fa-heart"></i></button>
+                  <button class="btn favorite_btn">
+                    <i class="far fa-heart"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </article>
         </div>
-        <div class="right_container"></div>
+        <div class="col-4 right_container"></div>
       </section>
     </div>
   </body>

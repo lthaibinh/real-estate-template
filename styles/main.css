@@ -379,6 +379,43 @@ p {
   align-items: center;
 }
 
+.input-group span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  padding: 4px;
+}
+.input-group span i {
+  font-size: 24px;
+}
+.input-group input {
+  padding-left: 2.2rem;
+}
+.input-group input:focus {
+  z-index: unset !important;
+}
+
+.forget-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.modal-login .modal-dialog-login {
+  height: 75vh;
+}
+.modal-login .modal-body-right {
+  display: flex;
+  flex-direction: column;
+}
+.modal-login .modal-header {
+  z-index: 1;
+}
+
 header {
   display: flex;
   height: 80px;
@@ -451,17 +488,8 @@ body .body_content .main_content {
   background-color: #f8f8f8;
   display: flex;
 }
-body .body_content .main_content .left_container {
-  flex: 2;
-}
-body .body_content .main_content .center_container {
-  flex: 5;
-}
 body .body_content .main_content .center_container .infomation_card + .infomation_card {
   margin-top: 16px;
-}
-body .body_content .main_content .right_container {
-  flex: 3;
 }
 
 /*# sourceMappingURL=main.css.map */

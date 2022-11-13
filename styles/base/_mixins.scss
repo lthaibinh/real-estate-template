@@ -4,3 +4,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
